@@ -1,0 +1,191 @@
+<!-- if logged in -->
+<%= if (current_user) { %>
+<header class="w-100 bb b--black-20 pv2 mb4-ns">
+  <section class="w-100 cf pv2 ph2">
+    <div class="w-100 w-third-ns fl tr pr4-l pr3-m tr-ns">
+      <a href="/" class="black-60">
+        <div class="dib pr3-ns">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; height: 25px; display: inline-block;" xml:space="preserve">
+							<path d="M365.08-1H144.92C64.707-1-1,64.707-1,144.92v220.16C-1,445.293,64.707,511,144.92,511h220.16
+								C445.293,511,511,445.293,511,365.08V144.92C511,64.707,445.293-1,365.08-1z M493.933,365.08
+								c0,70.827-58.027,128.853-128.853,128.853H144.92c-70.827,0-128.853-58.027-128.853-128.853V144.92
+								c0-70.827,58.027-128.853,128.853-128.853h220.16c70.827,0,128.853,58.027,128.853,128.853V365.08z"/>
+							<path d="M365.08,50.2H144.92c-52.053,0-94.72,42.667-94.72,94.72v220.16c0,52.053,42.667,94.72,94.72,94.72h220.16
+								c52.053,0,94.72-42.667,94.72-94.72V144.92C459.8,92.867,417.133,50.2,365.08,50.2z M442.733,365.08
+								c0,42.667-34.987,77.653-77.653,77.653H144.92c-42.667,0-77.653-34.987-77.653-77.653V144.92
+								c0-42.667,34.987-77.653,77.653-77.653h220.16c42.667,0,77.653,34.987,77.653,77.653V365.08z"/>
+							<path d="M255,118.467c-75.093,0-136.533,61.44-136.533,136.533S179.907,391.533,255,391.533S391.533,330.093,391.533,255
+								S330.093,118.467,255,118.467z M255,374.467c-65.707,0-119.467-53.76-119.467-119.467S189.293,135.533,255,135.533
+								S374.467,189.293,374.467,255S320.707,374.467,255,374.467z"/>
+							<path d="M255,161.133c-52.053,0-93.867,41.813-93.867,93.867c0,52.053,41.813,93.867,93.867,93.867s93.867-41.813,93.867-93.867
+								S307.053,161.133,255,161.133z M255,331.8c-42.667,0-76.8-34.133-76.8-76.8c0-42.667,34.133-76.8,76.8-76.8
+								c42.667,0,76.8,34.133,76.8,76.8C331.8,297.667,297.667,331.8,255,331.8z"/>
+							<path d="M391.533,92.867c-14.507,0-25.6,11.093-25.6,25.6s11.093,25.6,25.6,25.6c14.507,0,25.6-11.093,25.6-25.6
+								S406.04,92.867,391.533,92.867z"/>
+						</svg><!-- instagram logo -->
+        </div>
+        <div class="dib bl bw1 b--black-100 pl3-ns"><span class="sans-serif f2 fw5 black-60 ttc cf">Instagram</span></div>
+      </a>
+    </div><!-- logo -->
+    <div class="w-100 w-third-ns fl tc">
+      <div class="relative w-100">
+        <div class="absolute" style="top: 7px; left: 110px;">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966; height: 20px;" xml:space="preserve">
+							<path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+							s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+							c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+							s-17-7.626-17-17S14.61,6,23.984,6z" fill="#000" />
+						</svg><!-- search logo -->
+        </div>
+        <input class="bg-transparent w-90 w-two-thirds-ns ba b--black-20 br2 pa2 tr-m tc black-60" placeholder="search">
+      </div>
+    </div><!-- search -->
+    <div class="w-100 w-third-ns fl tl pl4-ns">
+      <h3><%= current_user.Email %></h3>
+      <a href="/signout" class="link pointer black-80 dim" data-method="DELETE">Sign Out</a>
+    </div><!-- profile -->
+  </section>
+</header>
+<main class="w-100 tc">
+  <section class="dib w-50">
+    <article class="w-100 ba b--black-20">
+      <div class="w-100 cf ph2 pv2">
+        <div class="w-80 fl tl black-60">
+          <span>Suggestions for you</span>
+        </div>
+        <div class="w-20 fl">
+          <a class="link pointer blue">See all</a>
+        </div>
+      </div>
+      <div class="w-100 bt b--black-20 cf ph2 pv2">
+        <div class="fl w-10 tl">
+          <img src="http://placehold.it/30x30" class="br-100">
+        </div><div class="fl w-70 tl">
+        <a href="#" class="pv2 no-underline">ryanjudinho_usani</a><br>
+        <small class="ph2">Ryan Judinho Usani</small>
+      </div><div class="fl w-20 pt2">
+        <a class="link pointer pv2 ph2 bg-blue white br2">Follow</a>
+      </div>
+      </div><!-- 1 -->
+      <div class="w-100 bt b--black-20 cf ph2 pv2">
+        <div class="fl w-10 tl">
+          <img src="http://placehold.it/30x30" class="br-100">
+        </div><div class="fl w-70 tl">
+        <a href="#" class="pv2 no-underline">iam_glorybill</a><br>
+        <small class="ph2">officialGloryBill</small>
+      </div><div class="fl w-20 pt2">
+        <a class="link pointer pv2 ph2 bg-blue white br2">Follow</a>
+      </div>
+      </div><!-- 2 -->
+      <div class="w-100 bt b--black-20 cf ph2 pv2">
+        <div class="fl w-10 tl">
+          <img src="http://placehold.it/30x30" class="br-100">
+        </div><div class="fl w-70 tl">
+        <a href="#" class="pv2 no-underline">mirainann</a><br>
+        <small class="ph2">i_amMirian</small>
+      </div><div class="fl w-20 pt2">
+        <a class="link pointer pv2 ph2 bg-blue white br2">Follow</a>
+      </div>
+      </div><!-- 3 -->
+    </article><!-- friends to add -->
+    <article class="w-100 tc mt2 mt4-ns ba b--black-20">
+      <div class="w-100 cf ph2 pv2">
+        <div class="fl w-10 tl">
+          <img src="http://placehold.it/30x30" class="br-100">
+        </div><div class="fl w-70 tl">
+        <a href="#" class="pv2 no-underline pointer link black-60">kingscorpio82</a><br>
+      </div><div class="fl w-20 pt2">
+        <a class="black-60">13h</a>
+      </div>
+      </div><!-- 1 -->
+      <div class="">
+        <img src="http://placehold.it/700x500" class="cover">
+      </div>
+      <div class="w-100 cf ph2">
+        <div class="fl w-100 tl pv1">
+          <a class="black-80 b pointer">107,595 likes</a><br>
+        </div>
+        <div class="fl w-100 tl pv1">
+          <a class="black-80 b pointer">kingscorpio82</a>
+          <span>word out :)</span>
+        </div>
+        <div class="fl w-100 tl pv1">
+          <a class="black-40 pointer">view all 3,030 comments</a>
+        </div>
+        <div class="fl w-100 tl pv1">
+          <a class="black-80 b pointer">jacekartye</a>
+          <span><a href="#" class="no-underline">@lauraepartain</a></span>
+        </div>
+        <div class="fl w-100 tl pv1">
+          <a class="black-80 b pointer">liam2ra</a>
+          <span><a href="#" class="no-underline">@poacherdoyle</a></span>
+        </div>
+        <div class="fl w-100 tl pv1">
+          <a class="black-80 b pointer">nmdolan</a>
+          <span><a href="#" class="no-underline">@nljessup</a></span>
+        </div>
+      </div><!-- views/likes/comments -->
+    </article><!-- friends 1 -->
+  </section>
+</main><!-- body -->
+<% } else { %>
+<!-- if not logged in -->
+<main class="bgcolor w-100 ph4-l pv2">
+  <section class="w-100 cf pv4">
+    <div class="w-100 w-50-ns fl tr-ns ph4-l pv2 bgimg">
+      <img src="/assets/images/f5ae123ab1e2.jpg">
+    </div><!-- left div -->
+    <div class="w-100 w-50-ns fl tc ph2 pv4-ns">
+      <div class="ba-ns b--black-10 w-100 w-80-m w-60-l ph4-l pt2 pv3-ns mb3 bg-white">
+        <h1 class="sans-serif f3 fw5 black-60 ttc cf">Instagram</h1>
+      </div>
+      <div class="w-100 w-80-m w-60-l ba-ns b--black-10 pv3 tc bg-white">
+        <span class="w-90 pa1"><a href="/signin" class="bg-blue white tc link pointer ph2 pv2 br2 no-underline">Log in</a></span>
+        <small class="fw6 black-60">Don't have an account? <a href="/users/new" class="blue no-underline pointer">Sign up</a></small>
+      </div>
+      <div class="w-100 w-80-m w-60-l pv3 tc">
+        <p class="fw6 mb3 black-60">Get the app.</p>
+        <a href="#" class="pa1 bg-black no-underline white pointer br2 mb2 dib mr2">
+          <div class="dib">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 311.265 311.265" style="enable-background:new 0 0 311.265 311.265; height: 20px;" xml:space="preserve">
+								<path d="M151.379,82.354c0.487,0.015,0.977,0.022,1.464,0.022c0.001,0,0.001,0,0.002,0c17.285,0,36.041-9.745,47.777-24.823
+									C212.736,42.011,218.24,23.367,215.723,6.4c-0.575-3.875-4.047-6.662-7.943-6.381c-17.035,1.193-36.32,11.551-47.987,25.772
+									c-12.694,15.459-18.51,34.307-15.557,50.418C144.873,79.684,147.848,82.243,151.379,82.354z M171.388,35.309
+									c7.236-8.82,18.949-16.106,29.924-19.028c-0.522,14.924-8.626,27.056-12.523,32.056c-7.576,9.732-19.225,16.735-30.338,18.566
+									C158.672,52.062,168.14,39.265,171.388,35.309z"/>
+								<path d="M282.608,226.332c-0.794-1.91-2.343-3.407-4.279-4.137c-30.887-11.646-40.56-45.12-31.807-69.461
+									c4.327-12.073,12.84-21.885,24.618-28.375c1.938-1.068,3.306-2.938,3.737-5.109c0.431-2.171-0.12-4.422-1.503-6.149
+									c-15.654-19.536-37.906-31.199-59.525-31.199c-15.136,0-25.382,3.886-34.422,7.314c-6.659,2.525-12.409,4.706-19.001,4.706
+									c-7.292,0-13.942-2.382-21.644-5.141c-9.003-3.225-19.206-6.88-31.958-6.88c-24.577,0-49.485,14.863-65.013,38.803
+									c-5.746,8.905-9.775,19.905-11.98,32.708c-6.203,36.422,4.307,79.822,28.118,116.101c13.503,20.53,30.519,41.546,54.327,41.749
+									l0.486,0.002c9.917,0,16.589-2.98,23.041-5.862c6.818-3.045,13.258-5.922,24.923-5.98l0.384-0.001
+									c11.445,0,17.681,2.861,24.283,5.89c6.325,2.902,12.866,5.903,22.757,5.903l0.453-0.003c23.332-0.198,41.002-22.305,55.225-43.925
+									c8.742-13.391,12.071-20.235,18.699-35.003C283.373,230.396,283.402,228.242,282.608,226.332z M251.281,259.065
+									c-11.329,17.222-26.433,37.008-42.814,37.148l-0.318,0.001c-6.615,0-10.979-2.003-16.503-4.537
+									c-7.046-3.233-15.815-7.256-30.538-7.256l-0.463,0.001c-14.819,0.074-23.77,4.072-30.961,7.285
+									c-5.701,2.547-10.204,4.558-16.923,4.558l-0.348-0.001c-16.862-0.145-31.267-18.777-41.929-34.987
+									c-21.78-33.184-31.45-72.565-25.869-105.332c1.858-10.789,5.155-19.909,9.79-27.093c12.783-19.708,32.869-31.951,52.419-31.951
+									c10.146,0,18.284,2.915,26.9,6.001c8.262,2.96,16.805,6.02,26.702,6.02c9.341,0,16.956-2.888,24.32-5.681
+									c8.218-3.117,16.717-6.34,29.104-6.34c14.739,0,30.047,7.097,42.211,19.302c-11.002,8.02-19.102,18.756-23.655,31.461
+									c-11.872,33.016,2.986,69.622,33.334,85.316C261.229,242.764,258.024,248.734,251.281,259.065z" fill="#FFF"/>
+							</svg><!-- apple store icon -->
+          </div>
+          <span class="dib v-mid white fw6" style="font-size: 12px;">
+							Download on the<br>
+							<span class="f5">App Store</span>
+						</span>
+        </a>
+        <a href="#" class="pa1 bg-black no-underline white pointer br2 dib">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 224.993 224.993" style="enable-background:new 0 0 224.993 224.993; height: 20px" xml:space="preserve">
+							<path d="M201.539,91.023L48.002,3.26C44.271,1.127,40.026,0,35.728,0c-4.354,0-8.646,1.155-12.412,3.34  c-7.6,4.409-12.321,12.606-12.321,21.393V200.26c0,8.786,4.721,16.983,12.319,21.392c3.766,2.187,8.059,3.342,12.413,3.342  c4.296,0,8.541-1.128,12.274-3.261l153.535-87.764c7.686-4.394,12.46-12.621,12.46-21.473S209.224,95.417,201.539,91.023z   M135.006,70.271l-21.081,29.364L63.5,29.397L135.006,70.271z M34.76,209.908c-1.371-0.133-2.716-0.533-3.917-1.23  c-2.99-1.735-4.848-4.961-4.848-8.418V24.732c0-3.457,1.858-6.683,4.849-8.418c1.197-0.695,2.531-1.109,3.902-1.25l69.946,97.432  L34.76,209.908z M63.5,195.596l50.425-70.239l21.081,29.364L63.5,195.596z M194.094,120.945l-45.996,26.292l-24.941-34.741  l24.941-34.741l45.996,26.292c3.024,1.729,4.903,4.966,4.903,8.449S197.119,119.217,194.094,120.945z" fill="#006DF0"/>
+						</svg><!-- google play store logo -->
+          <span class="dib v-mid white fw6" style="font-size: 12px;">
+					    	Get it on<br>
+					    	<span class="f5">Google</span><span class="f5 fw4">Play</span>
+					    </span>
+        </a>
+      </div>
+    </div><!-- right div -->
+  </section><!-- main section -->
+</main>
+<% } %>

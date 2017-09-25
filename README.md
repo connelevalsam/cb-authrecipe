@@ -1,21 +1,37 @@
-# cb-authrecipe
-A simple password authentication system that looks like Instagram.
+# Welcome to Buffalo!
 
-![cb instagramlanding page](https://user-images.githubusercontent.com/13662770/30819147-bdec59d8-a215-11e7-8cae-d096f842abd4.png)
-This is the landing page.
-Where you choose to login or signup.
+Thank you for choosing Buffalo for your web development needs.
 
 
-![cb instagram login](https://user-images.githubusercontent.com/13662770/30819148-bdf5e8d6-a215-11e7-9ff6-351ffd744465.png)
-This is the login page
+## Database Setup
+
+It looks like you chose to set up your application using a postgres database! Fantastic!
+
+The first thing you need to do is open up the "database.yml" file and edit it to use the correct usernames, passwords, hosts, etc... that are appropriate for your environment.
+
+You will also need to make sure that **you** start/install the database of your choice. Buffalo **won't** install and start postgres for you.
+
+### Create Your Databases
+
+Ok, so you've edited the "database.yml" file and started postgres, now Buffalo can create the databases in that file for you:
+
+	$ buffalo db create -a
 
 
-![cb instagram signup](https://user-images.githubusercontent.com/13662770/30819149-be3e4af4-a215-11e7-844e-04c58fe29d67.png)
-This is signup page
+## Starting the Application
 
+Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
 
-![cb intagram main](https://user-images.githubusercontent.com/13662770/30819150-be4433ba-a215-11e7-85e1-6562ec3537f8.png)
-After login is successful.
+	$ buffalo dev
 
+If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a "Welcome to Buffalo!" page.
 
-Didn't really go for the designs.
+**Congratulations!** You now have your Buffalo application up and running.
+
+## What Next?
+
+We recommend you heading over to [http://gobuffalo.io](http://gobuffalo.io) and reviewing all of the great documentation there.
+
+Good luck!
+
+[Powered by Buffalo](http://gobuffalo.io)

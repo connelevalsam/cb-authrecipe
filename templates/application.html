@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buffalo - Authrecipe</title>
+    <link rel="stylesheet" href="/assets/application.css" type="text/css" media="all" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="<%= authenticity_token %>" />
+  </head>
+  <body>
+
+    <div class="w-100">
+      <%= partial("flash.html") %>
+      <%= yield %>
+    </div>
+    <footer class="pa3 bg-transparent cf-ns mb4-ns">
+      <nav class="dtc v-mid w-100 w-60-m w-80-l fl-ns tc mt0-ns">
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">about us</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">support</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">blog</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">press</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">api</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">jobs</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">privacy</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">terms</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">directory</small></a>
+        <a class="link pointer blue mr2 ttu dib"><small class="fw6">language</small></a>
+      </nav><div class="black-50 fl-ns w-100 w-40-m w-20-l tc pt2 pt0-ns">
+      <small class="fw6 black-60">&copy2017 INSTAGRAM</small>
+    </div>
+    </footer>
+
+    <script src="/assets/application.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
